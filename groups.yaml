@@ -1,0 +1,38 @@
+default_view:
+  view: yes
+  entities:
+    - group.indoor_climate
+    - group.weather
+indoor_climate:
+  name: Indoor Climate
+  entities:
+    - climate.bobina
+    - sensor.bobina_temperature
+    - sensor.bobito_temperature
+    - sensor.bobina_humidity
+server_info:
+  name: Server Info
+  entities:
+    - sensor.since_last_boot
+    - sensor.cpu_use
+    - sensor.ram_use
+    - sensor.ram_free
+weather:
+  name: Weather
+  entities:
+    - sensor.yweather_current
+    - sensor.yweather_temperature
+    - sensor.yweather_temperature_max
+    - sensor.yweather_temperature_min
+    - sensor.yweather_humidity
+    - sensor.yweather_wind_speed
+    - sun.sun
+master_bedroom:
+  name: Master Bedroom
+  view: yes
+  entities:
+    - media_player.bedroom_chromecast
+office:
+  name: Office
+  view: yes
+  entities: group.server_info

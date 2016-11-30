@@ -1,0 +1,19 @@
+- platform: yr
+- platform: plex
+- platform: systemmonitor
+  resources:
+    - type: memory_use_percent
+    - type: memory_free
+    - type: processor_use
+    - type: since_last_boot
+- platform: yweather
+  monitored_conditions:
+    - weather
+    - weather_current
+    - temp_min
+    - temp_max
+    - wind_speed
+    - pressure
+    - visibility
+    - humidity
+    - temperature

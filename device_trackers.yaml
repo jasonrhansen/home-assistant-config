@@ -1,0 +1,5 @@
+- platform: netgear
+  host: 192.168.0.1
+  port: 80
+  username: admin
+  password: !secret router_password
