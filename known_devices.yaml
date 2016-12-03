@@ -1,0 +1,63 @@
+hansen_jasonnexus6p:
+  hide_if_away: false
+  mac: A0:8D:16:F3:86:F3
+  name: Jason's Nexus 6P
+  picture: /local/jason.jpg
+  track: true
+
+hansen_luisaiphone:
+  hide_if_away: false
+  mac: 8C:8E:F2:C9:FC:73
+  name: Luisa's iPhone
+  picture: /local/luisa.jpg
+  track: true
+
+b4cef69e326f:
+  hide_if_away: false
+  mac: B4:CE:F6:9E:32:6F
+  name: b4cef69e326f
+  picture:
+  track: false
+
+00184dffff07:
+  hide_if_away: false
+  mac: 00:18:4D:FF:FF:07
+  name: 00184dffff07
+  picture:
+  track: no
+
+d0e782bd7351:
+  hide_if_away: false
+  mac: D0:E7:82:BD:73:51
+  name: d0e782bd7351
+  picture:
+  track: no
+
+6c40088da860:
+  hide_if_away: false
+  mac: 6C:40:08:8D:A8:60
+  name: 6c40088da860
+  picture:
+  track: no
+
+2c3033be0eea:
+  hide_if_away: false
+  mac: 2C:30:33:BE:0E:EA
+  name: 2c3033be0eea
+  picture:
+  track: no
+
+d0e7827c5c28:
+  hide_if_away: false
+  mac: D0:E7:82:7C:5C:28
+  name: d0e7827c5c28
+  picture:
+  track: no
+
+446132fe388e:
+  hide_if_away: false
+  mac: 44:61:32:FE:38:8E
+  name: 446132fe388e
+  picture:
+  track: no
+

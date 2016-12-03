@@ -1,5 +1,5 @@
 homeassistant:
-  name: Hansen Home
+  name: Home
   latitude: 41.0859
   longitude: -111.9022
   elevation: 1577
@@ -19,10 +19,27 @@ http:
   api_password: !secret http_password
 
 ecobee:
-  api_key: !secret ecobee_api_key 
+  api_key: !secret ecobee_api_key
 
 ifttt:
   key: !secret ifttt_api_key
+
+mqtt:
+  broker: jasonrhansen.com
+  port: 8883
+  certificate: /etc/ssl/certs/DST_Root_CA_X3.pem
+  client_id: home-assistant
+  username: hansen
+  password: !secret mosquitto_password
+  protocol: 3.1
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+    qos: 1
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
+    qos: 1
 
 group: !include groups.yaml
 sensor: !include sensors.yaml

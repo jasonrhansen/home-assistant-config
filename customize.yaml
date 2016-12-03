@@ -1,11 +1,11 @@
 climate.bobina:
   friendly_name: Ecobee Thermostat
 sensor.bobina_humidity:
-  friendly_name: Humidity 
+  friendly_name: Humidity
 sensor.bobina_temperature:
-  friendly_name: Main Floor Temperature 
+  friendly_name: Main Floor Temperature
 sensor.bobito_temperature:
-  friendly_name: Upstairs Temperature 
+  friendly_name: Upstairs Temperature
 sensor.yweather_current:
   friendly_name: Current Conditions
 sensor.yweather_temperature:
@@ -18,3 +18,5 @@ sensor.yweather_humidity:
   friendly_name: Humidity
 sensor.yweather_wind_speed:
   friendly_name: Wind Speed
+group.all_devices:
+  hidden: false

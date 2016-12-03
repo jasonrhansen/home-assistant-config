@@ -3,6 +3,7 @@ default_view:
   entities:
     - group.indoor_climate
     - group.weather
+    - group.all_devices
 indoor_climate:
   name: Indoor Climate
   entities:
@@ -32,6 +33,11 @@ master_bedroom:
   view: yes
   entities:
     - media_player.bedroom_chromecast
+basement:
+  name: Basement
+  view: yes
+  entities:
+    - media_player.basement_chromecast
 office:
   name: Office
   view: yes
