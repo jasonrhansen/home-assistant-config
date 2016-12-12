@@ -3,7 +3,12 @@ default_view:
   entities:
     - group.indoor_climate
     - group.weather
-    - group.all_devices
+    - group.devices
+devices:
+  name: Devices
+  entities:
+    - device_tracker.hansen_jasonnexus6p
+    - device_tracker.hansen_luisaiphone
 indoor_climate:
   name: Indoor Climate
   entities:
@@ -18,6 +23,7 @@ server_info:
     - sensor.cpu_use
     - sensor.ram_use
     - sensor.ram_free
+    - sensor.plex
 weather:
   name: Weather
   entities:
@@ -33,6 +39,11 @@ master_bedroom:
   view: yes
   entities:
     - media_player.bedroom_chromecast
+guest_bedroom:
+  name: Guest Bedroom
+  view: yes
+  entities:
+    - media_player.guest_room_chromecast
 basement:
   name: Basement
   view: yes

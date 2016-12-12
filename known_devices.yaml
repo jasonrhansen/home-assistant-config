@@ -3,14 +3,35 @@ hansen_jasonnexus6p:
   mac: A0:8D:16:F3:86:F3
   name: Jason's Nexus 6P
   picture: /local/jason.jpg
-  track: true
+  track: yes
 
 hansen_luisaiphone:
   hide_if_away: false
   mac: 8C:8E:F2:C9:FC:73
   name: Luisa's iPhone
   picture: /local/luisa.jpg
-  track: true
+  track: yes
+
+bedroom_chromecast:
+  hide_if_away: false
+  mac: D0:E7:82:7C:5C:28
+  name: Bedroom Chromecast
+  picture:
+  track: yes
+
+basement_chromecast:
+  hide_if_away: false
+  mac: D0:E7:82:BD:73:51
+  name: Basement Chromecast
+  picture:
+  track: yes
+
+guest_room_chromecast:
+  hide_if_away: false
+  mac: 80:D2:1D:23:13:FD
+  name: Guest Room Chromecast
+  picture:
+  track: yes
 
 b4cef69e326f:
   hide_if_away: false
@@ -26,13 +47,6 @@ b4cef69e326f:
   picture:
   track: no
 
-d0e782bd7351:
-  hide_if_away: false
-  mac: D0:E7:82:BD:73:51
-  name: d0e782bd7351
-  picture:
-  track: no
-
 6c40088da860:
   hide_if_away: false
   mac: 6C:40:08:8D:A8:60
@@ -44,13 +58,6 @@ d0e782bd7351:
   hide_if_away: false
   mac: 2C:30:33:BE:0E:EA
   name: 2c3033be0eea
-  picture:
-  track: no
-
-d0e7827c5c28:
-  hide_if_away: false
-  mac: D0:E7:82:7C:5C:28
-  name: d0e7827c5c28
   picture:
   track: no
 

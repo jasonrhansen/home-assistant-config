@@ -18,5 +18,3 @@ sensor.yweather_humidity:
   friendly_name: Humidity
 sensor.yweather_wind_speed:
   friendly_name: Wind Speed
-group.all_devices:
-  hidden: false
