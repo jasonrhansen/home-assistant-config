@@ -1,0 +1,32 @@
+- platform: mqtt
+  name: "Jason's Lamp"
+  state_topic: "smartthings/Jason's Lamp/switch"
+  command_topic: "smartthings/Jason's Lamp/switch"
+  brightness_state_topic: "smartthings/Jason's Lamp/level"
+  brightness_command_topic: "smartthings/Jason's Lamp/level"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
+- platform: mqtt
+  name: "Luisa's Lamp"
+  state_topic: "smartthings/Luisa's Lamp/switch"
+  command_topic: "smartthings/Luisa's Lamp/switch"
+  brightness_state_topic: "smartthings/Luisa's Lamp/level"
+  brightness_command_topic: "smartthings/Luisa's Lamp/level"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
+- platform: mqtt
+  name: "Living Room Lamp"
+  state_topic: "smartthings/Living Room Lamp/switch"
+  command_topic: "smartthings/Living Room Lamp/switch"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
+- platform: mqtt
+  name: "Outside Lights"
+  state_topic: "smartthings/Outside Lights/switch"
+  command_topic: "smartthings/Outside Lights/switch"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true

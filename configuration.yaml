@@ -25,12 +25,9 @@ ifttt:
   key: !secret ifttt_api_key
 
 mqtt:
-  broker: jasonrhansen.com
-  port: 8883
-  certificate: /etc/ssl/certs/DST_Root_CA_X3.pem
+  broker: 192.168.0.101
+  port: 1883
   client_id: home-assistant
-  username: hansen
-  password: !secret mosquitto_password
   protocol: 3.1
   birth_message:
     topic: 'hass/status'
@@ -45,3 +42,5 @@ group: !include groups.yaml
 sensor: !include sensors.yaml
 media_player: !include media_players.yaml
 device_tracker: !include device_trackers.yaml
+light: !include lights.yaml
+switch: !include switches.yaml

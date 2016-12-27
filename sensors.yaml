@@ -1,3 +1,23 @@
+- platform: mqtt
+  name: "Front Door"
+  state_topic: "smartthings/Front Door/contact"
+  payload_on: "closed"
+  payload_off: "open"
+  sensor_class: opening
+- platform: mqtt
+  name: "Front Door Temperature"
+  state_topic: "smartthings/Front Door/temperature"
+  unit_of_measurement: "°F"
+- platform: mqtt
+  name: "Back Door"
+  state_topic: "smartthings/Back Door/contact"
+  payload_on: "closed"
+  payload_off: "open"
+  sensor_class: opening
+- platform: mqtt
+  name: "Back Door Temperature"
+  state_topic: "smartthings/Back Door/temperature"
+  unit_of_measurement: "°F"
 - platform: yr
 - platform: plex
 - platform: systemmonitor

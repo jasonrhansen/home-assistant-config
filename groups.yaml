@@ -1,9 +1,12 @@
 default_view:
   view: yes
   entities:
-    - group.indoor_climate
-    - group.weather
+    - group.living_room
+    - group.master_bedroom
+    - group.outside
+    - group.doors
     - group.devices
+    - group.indoor_climate
 devices:
   name: Devices
   entities:
@@ -15,6 +18,8 @@ indoor_climate:
     - climate.bobina
     - sensor.bobina_temperature
     - sensor.bobito_temperature
+    - sensor.front_door_temperature
+    - sensor.back_door_temperature
     - sensor.bobina_humidity
 server_info:
   name: Server Info
@@ -24,6 +29,36 @@ server_info:
     - sensor.ram_use
     - sensor.ram_free
     - sensor.plex
+master_bedroom:
+  name: Master Bedroom
+  entities:
+    - light.jasons_lamp
+    - light.luisas_lamp
+living_room:
+  name: Living Room
+  entities:
+    - light.living_room_lamp
+    - switch.living_room_switch
+outside:
+  name: Outside
+  entities:
+    - light.outside_lights
+doors:
+  name: Doors
+  entities:
+    - sensor.front_door
+    - sensor.back_door
+media:
+  name: Media
+  view: yes
+  entities:
+    - media_player.bedroom_chromecast
+    - media_player.guest_room_chromecast
+    - media_player.basement_chromecast
+server:
+  name: Server
+  view: yes
+  entities: group.server_info
 weather:
   name: Weather
   entities:
@@ -34,22 +69,3 @@ weather:
     - sensor.yweather_humidity
     - sensor.yweather_wind_speed
     - sun.sun
-master_bedroom:
-  name: Master Bedroom
-  view: yes
-  entities:
-    - media_player.bedroom_chromecast
-guest_bedroom:
-  name: Guest Bedroom
-  view: yes
-  entities:
-    - media_player.guest_room_chromecast
-basement:
-  name: Basement
-  view: yes
-  entities:
-    - media_player.basement_chromecast
-office:
-  name: Office
-  view: yes
-  entities: group.server_info

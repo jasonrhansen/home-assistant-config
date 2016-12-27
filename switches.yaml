@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: "Living Room Switch"
+  state_topic: "smartthings/Living Room Switch/switch"
+  command_topic: "smartthings/Living Room Switch/switch"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true

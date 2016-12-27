@@ -3,4 +3,7 @@
   consider_home: 180
   track_new_devices: false
 
-- platform: owntracks
+- platform: mqtt
+  devices:
+    jason_nexus: "smartthings/Jason Hansen's Android/presence"
+    luisa_iphone: "smartthings/Luisa's iPhone/presence"
