@@ -4,21 +4,44 @@ default_view:
     - group.living_room
     - group.master_bedroom
     - group.outside
-    - group.doors
+    - group.sensors
     - group.devices
     - group.indoor_climate
+living_room:
+  name: Living Room
+  entities:
+    - light.living_room_lamp
+    - switch.living_room_switch
+master_bedroom:
+  name: Master Bedroom
+  entities:
+    - light.jasons_lamp
+    - light.luisas_lamp
+outside:
+  name: Outside
+  entities:
+    - light.outside_lights
+sensors:
+  name: Sensors
+  entities:
+    - sensor.front_motion_sensor
+    - sensor.back_door
+    - sensor.house_garage_door
 devices:
   name: Devices
   entities:
     - device_tracker.hansen_jasonnexus6p
     - device_tracker.hansen_luisaiphone
+    - device_tracker.jason_nexus
+    - device_tracker.luisa_iphone
 indoor_climate:
   name: Indoor Climate
   entities:
     - climate.bobina
     - sensor.bobina_temperature
     - sensor.bobito_temperature
-    - sensor.front_door_temperature
+    - sensor.front_motion_sensor_temperature
+    - sensor.house_garage_door_temperature
     - sensor.back_door_temperature
     - sensor.bobina_humidity
 server_info:
@@ -29,25 +52,6 @@ server_info:
     - sensor.ram_use
     - sensor.ram_free
     - sensor.plex
-master_bedroom:
-  name: Master Bedroom
-  entities:
-    - light.jasons_lamp
-    - light.luisas_lamp
-living_room:
-  name: Living Room
-  entities:
-    - light.living_room_lamp
-    - switch.living_room_switch
-outside:
-  name: Outside
-  entities:
-    - light.outside_lights
-doors:
-  name: Doors
-  entities:
-    - sensor.front_door
-    - sensor.back_door
 media:
   name: Media
   view: yes
@@ -59,6 +63,10 @@ server:
   name: Server
   view: yes
   entities: group.server_info
+automations:
+  name: Automations
+  view: yes
+  entities: group.all_automations
 weather:
   name: Weather
   entities:

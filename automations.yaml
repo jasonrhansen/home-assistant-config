@@ -1,0 +1,92 @@
+- alias: "Turn on outside lights before sunset"
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:45:00"
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.outside_lights
+- alias: "Turn off outside lights at midnight"
+  trigger:
+    platform: time
+    after: "00:00:00"
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.outside_lights
+- alias: "Turn on outside lights in early morning"
+  trigger:
+    platform: time
+    after: "06:00:00"
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.outside_lights
+- alias: "Turn off outside lights after sunrise"
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "+00:45:00"
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.outside_lights
+- alias: "Notify when garage door is open and not home"
+  trigger:
+    platform: state
+    entity_id: sensor.house_garage_door
+    from: 'closed'
+    to: 'open'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: 'device_tracker.hansen_jasonnexus6p'
+        state: 'not home'
+      - condition: state
+        entity_id: 'device_tracker.hansen_luisaiphone'
+        state: 'not home'
+  action:
+    service: notify.pushbullet
+    data:
+      message: "House garage door was opened"
+      title: "Door Open"
+- alias: "Notify when garage door open for a minute"
+  trigger:
+    platform: state
+    entity_id: sensor.house_garage_door
+    from: 'closed'
+    to: 'open'
+  action:
+    service: notify.pushbullet
+    data:
+      message: "House garage door has been open for 1 minute"
+      title: "Door Open"
+- alias: "Notify when back door open and not home"
+  trigger:
+    platform: state
+    entity_id: sensor.back_door
+    from: 'closed'
+    to: 'open'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: 'device_tracker.hansen_jasonnexus6p'
+        state: 'not home'
+      - condition: state
+        entity_id: 'device_tracker.hansen_luisaiphone'
+        state: 'not home'
+  action:
+    service: notify.pushbullet
+    data:
+      message: "Back door was opened"
+      title: "Door Open"
+- alias: "Notify when back door open for a minute"
+  trigger:
+    platform: state
+    entity_id: sensor.back_door
+    from: 'closed'
+    to: 'open'
+  action:
+    service: notify.pushbullet
+    data:
+      message: "Back door has been open for 1 minute"
+      title: "Door Open"

@@ -5,5 +5,5 @@
 
 - platform: mqtt
   devices:
-    jason_nexus: "smartthings/Jason Hansen's Android/presence"
-    luisa_iphone: "smartthings/Luisa's iPhone/presence"
+    hansen_jasonnexus6p: "smartthings/Jason Hansen's Android/presence"
+    hansen_luisaiphone: "smartthings/Luisa's iPhone/presence"
