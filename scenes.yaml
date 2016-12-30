@@ -1,0 +1,20 @@
+- name: Master bedroom normal
+  entities:
+    light.jasons_lamp:
+      state: on
+      transition: 2
+      brightness: 245
+    light.luisas_lamp:
+      state: on
+      transition: 2
+      brightness: 245
+- name: Master bedroom dim
+  entities:
+    light.jasons_lamp:
+      state: on
+      transition: 2
+      brightness: 25
+    light.luisas_lamp:
+      state: on
+      transition: 2
+      brightness: 25

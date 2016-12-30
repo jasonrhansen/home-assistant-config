@@ -1,9 +1,8 @@
+- platform: mqtt
+  devices:
+    jason_nexus: "smartthings/Jason Hansen's Android/presence"
+    luisa_iphone: "smartthings/Luisa's iPhone/presence"
 - platform: nmap_tracker
   hosts: 192.168.0.1/24
   consider_home: 180
   track_new_devices: false
-
-- platform: mqtt
-  devices:
-    hansen_jasonnexus6p: "smartthings/Jason Hansen's Android/presence"
-    hansen_luisaiphone: "smartthings/Luisa's iPhone/presence"

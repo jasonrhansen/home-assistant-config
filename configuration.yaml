@@ -38,15 +38,12 @@ mqtt:
     payload: 'offline'
     qos: 1
 
-notify:
-  name: pushbullet
-  platform: pushbullet
-  api_key: !secret jason_pushbullet_api_key
-
-group: !include groups.yaml
-sensor: !include sensors.yaml
-media_player: !include media_players.yaml
-device_tracker: !include device_trackers.yaml
-light: !include lights.yaml
-switch: !include switches.yaml
 automation: !include automations.yaml
+device_tracker: !include device_trackers.yaml
+group: !include groups.yaml
+light: !include lights.yaml
+media_player: !include media_players.yaml
+notify: !include notify.yaml
+scene: !include scenes.yaml
+sensor: !include sensors.yaml
+switch: !include switches.yaml

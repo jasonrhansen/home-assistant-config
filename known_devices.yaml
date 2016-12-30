@@ -1,11 +1,11 @@
-hansen_jasonnexus6p:
+jason_nexus:
   hide_if_away: false
   mac: A0:8D:16:F3:86:F3
   name: Jason's Nexus 6P
   picture: /local/jason.jpg
   track: yes
 
-hansen_luisaiphone:
+luisa_iphone:
   hide_if_away: false
   mac: 8C:8E:F2:C9:FC:73
   name: Luisa's iPhone

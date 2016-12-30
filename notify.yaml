@@ -1,0 +1,11 @@
+- name: pushbullet_jason
+  platform: pushbullet
+  api_key: !secret jason_pushbullet_api_key
+- name: pushbullet_luisa
+  platform: pushbullet
+  api_key: !secret luisa_pushbullet_api_key
+- name: pushbullet
+  platform: group
+  services:
+    - service: pushbullet_jason
+    - service: pushbullet_luisa

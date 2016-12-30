@@ -54,6 +54,8 @@
     entity_id: sensor.house_garage_door
     from: 'closed'
     to: 'open'
+    for:
+      minutes: 1
   action:
     service: notify.pushbullet
     data:
@@ -66,14 +68,9 @@
     from: 'closed'
     to: 'open'
   condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: 'device_tracker.hansen_jasonnexus6p'
-        state: 'not home'
-      - condition: state
-        entity_id: 'device_tracker.hansen_luisaiphone'
-        state: 'not home'
+    condition: state
+    entity_id: group.phones
+    state: 'not home'
   action:
     service: notify.pushbullet
     data:
@@ -85,8 +82,58 @@
     entity_id: sensor.back_door
     from: 'closed'
     to: 'open'
+    for:
+      minutes: 1
   action:
     service: notify.pushbullet
     data:
       message: "Back door has been open for 1 minute"
       title: "Door Open"
+- alias: "Notify when front motion active and not home"
+  trigger:
+    platform: state
+    entity_id: sensor.back_door
+    from: 'inactive'
+    to: 'active'
+  condition:
+    condition: state
+    entity_id: group.phones
+    state: 'not home'
+  action:
+    service: notify.pushbullet
+    data:
+      message: "There was motion detected by the front motion sensor"
+      title: "Motion Detected"
+- alias: New version notification
+  trigger:
+    - platform: state
+      entity_id: updater.updater
+  action:
+    service: notify.pushbullet_jason
+    data:
+      title: 'New Home Assistant Release'
+      message: "Home Assistant  {{ states.updater.updater.state }}  is now available."
+- alias: "Bedroom Chromecast paused/stopped"
+  trigger:
+    - platform: state
+      entity_id: media_player.bedrooom_chromecast
+      from: 'playing'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+  action:
+    service: scene.turn_on
+    entity_id: scene.master_bedroom_normal
+- alias: "Bedroom Chromecast playing"
+  trigger:
+    - platform: state
+      entity_id: media_player.bedrooom_chromecast
+      to: 'playing'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+  action:
+    service: scene.turn_on
+    entity_id: scene.master_bedroom_dim

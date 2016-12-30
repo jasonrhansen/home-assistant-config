@@ -30,8 +30,11 @@ sensors:
 devices:
   name: Devices
   entities:
-    - device_tracker.hansen_jasonnexus6p
-    - device_tracker.hansen_luisaiphone
+    - device_tracker.jason_nexus
+    - device_tracker.luisa_iphone
+phones:
+  name: Phones
+  entities:
     - device_tracker.jason_nexus
     - device_tracker.luisa_iphone
 indoor_climate:
