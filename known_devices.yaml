@@ -33,12 +33,19 @@ guest_room_chromecast:
   picture:
   track: yes
 
+living_room_home:
+  hide_if_away: false
+  mac: F4:F5:D8:BC:FA:52
+  name: Living Room Home
+  picture:
+  track: yes
+
 b4cef69e326f:
   hide_if_away: false
   mac: B4:CE:F6:9E:32:6F
   name: b4cef69e326f
   picture:
-  track: false
+  track: no
 
 00184dffff07:
   hide_if_away: false
