@@ -54,7 +54,6 @@ server_info:
     - sensor.cpu_use
     - sensor.ram_use
     - sensor.ram_free
-    - sensor.plex
 media:
   name: Media
   view: yes
@@ -62,6 +61,7 @@ media:
     - media_player.bedroom_chromecast
     - media_player.guest_room_chromecast
     - media_player.basement_chromecast
+    - media_player.living_room_home
 server:
   name: Server
   view: yes

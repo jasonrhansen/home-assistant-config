@@ -115,25 +115,47 @@
       message: "Home Assistant  {{ states.updater.updater.state }}  is now available."
 - alias: "Bedroom Chromecast paused/stopped"
   trigger:
-    - platform: state
-      entity_id: media_player.bedrooom_chromecast
-      from: 'playing'
+    platform: state
+    entity_id: media_player.bedrooom_chromecast
+    from: 'playing'
   condition:
-    - condition: state
-      entity_id: sun.sun
-      state: 'below_horizon'
+    condition: state
+    entity_id: sun.sun
+    state: 'below_horizon'
   action:
     service: scene.turn_on
     entity_id: scene.master_bedroom_normal
 - alias: "Bedroom Chromecast playing"
   trigger:
-    - platform: state
-      entity_id: media_player.bedrooom_chromecast
-      to: 'playing'
+    platform: state
+    entity_id: media_player.bedrooom_chromecast
+    to: 'playing'
   condition:
-    - condition: state
-      entity_id: sun.sun
-      state: 'below_horizon'
+    condition: state
+    entity_id: sun.sun
+    state: 'below_horizon'
   action:
     service: scene.turn_on
     entity_id: scene.master_bedroom_dim
+- alias: "Turn on master bedroom lights in the evening"
+  trigger:
+    platform: sun
+    event: sunset
+  condition:
+    condition: state
+    entity_id: group.master_bedroom
+    state: 'off'
+  action:
+    service: scene.turn_on
+    entity_id: scene.master_bedroom_dim
+- alias: "Turn off master bedroom lights at midnight if nobody's there"
+  trigger:
+    platform: time
+    after: "00:00:00"
+  condition:
+    condition: state
+    entity_id: binary_sensor.bobito_occupancy
+    state: 'off'
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.master_bedroom
