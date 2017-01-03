@@ -32,7 +32,6 @@
   trigger:
     platform: state
     entity_id: sensor.house_garage_door
-    from: 'closed'
     to: 'open'
   condition:
     condition: and
@@ -47,12 +46,11 @@
     service: notify.pushbullet
     data:
       message: "House garage door was opened"
-      title: "Door Open"
+      title: "House garage door was opened"
 - alias: "Notify when garage door open for a minute"
   trigger:
     platform: state
     entity_id: sensor.house_garage_door
-    from: 'closed'
     to: 'open'
     for:
       minutes: 1
@@ -60,12 +58,11 @@
     service: notify.pushbullet
     data:
       message: "House garage door has been open for 1 minute"
-      title: "Door Open"
+      title: "House garage door has been open for 1 minute"
 - alias: "Notify when back door open and not home"
   trigger:
     platform: state
     entity_id: sensor.back_door
-    from: 'closed'
     to: 'open'
   condition:
     condition: state
@@ -75,12 +72,11 @@
     service: notify.pushbullet
     data:
       message: "Back door was opened"
-      title: "Door Open"
+      title: "Back door was opened"
 - alias: "Notify when back door open for a minute"
   trigger:
     platform: state
     entity_id: sensor.back_door
-    from: 'closed'
     to: 'open'
     for:
       minutes: 1
@@ -88,12 +84,11 @@
     service: notify.pushbullet
     data:
       message: "Back door has been open for 1 minute"
-      title: "Door Open"
+      title: "Back door has been open for 1 minute"
 - alias: "Notify when front motion active and not home"
   trigger:
     platform: state
     entity_id: sensor.back_door
-    from: 'inactive'
     to: 'active'
   condition:
     condition: state
@@ -103,7 +98,7 @@
     service: notify.pushbullet
     data:
       message: "There was motion detected by the front motion sensor"
-      title: "Motion Detected"
+      title: "There was motion detected by the front motion sensor"
 - alias: New version notification
   trigger:
     - platform: state
