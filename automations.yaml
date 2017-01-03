@@ -154,3 +154,18 @@
   action:
     service: homeassistant.turn_off
     entity_id: group.master_bedroom
+- alias: "Turn on master bedroom lights weekday mornings"
+  trigger:
+    platform: time
+    after: "06:30:00"
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: scene.turn_on
+    entity_id: scene.master_bedroom_normal
