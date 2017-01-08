@@ -6,7 +6,7 @@ After=network.target
 User=hass
 Group=hass
 Type=simple
-ExecStart=/usr/bin/hass --config /srv/home-assistant
+ExecStart=/srv/home-assistant/bin/hass --config /srv/home-assistant
 
 [Install]
 WantedBy=multi-user.target
