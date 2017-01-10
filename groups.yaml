@@ -27,6 +27,8 @@ sensors:
     - sensor.front_motion_sensor
     - sensor.back_door
     - sensor.house_garage_door
+    - sensor.carbon_monoxide_detector
+    - sensor.smoke_detector
 devices:
   name: Devices
   entities:

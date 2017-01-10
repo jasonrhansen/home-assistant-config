@@ -28,6 +28,18 @@
   name: "Front Motion Sensor Temperature"
   state_topic: "smartthings/Front Motion Sensor/temperature"
   unit_of_measurement: "°F"
+- platform: mqtt
+  name: "Carbon Monoxide Detector"
+  state_topic: "smartthings/Smoke and CO Alarm/carbonMonoxide"
+  payload_on: "detected"
+  payload_off: "clear"
+  sensor_class: smoke
+- platform: mqtt
+  name: "Smoke Detector"
+  state_topic: "smartthings/Smoke and CO Alarm/smoke"
+  payload_on: "detected"
+  payload_off: "clear"
+  sensor_class: smoke
 - platform: yr
 - platform: plex
 - platform: systemmonitor

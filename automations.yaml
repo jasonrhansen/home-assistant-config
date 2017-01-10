@@ -169,3 +169,23 @@
   action:
     service: scene.turn_on
     entity_id: scene.master_bedroom_normal
+- alias: "Notify when carbon monoxide detected"
+  trigger:
+    platform: state
+    entity_id: sensor.carbon_monoxide_detector
+    to: 'detected'
+  action:
+    service: notify.pushbullet
+    data:
+      message: "Carbon monoxide was detected in your home!!!"
+      title: "Carbon monoxide detected!"
+- alias: "Notify when smoke detected"
+  trigger:
+    platform: state
+    entity_id: sensor.smoke_detector
+    to: 'detected'
+  action:
+    service: notify.pushbullet
+    data:
+      message: "Smoke was detected in your home!!!"
+      title: "Smoke detected!"
