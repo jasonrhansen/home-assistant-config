@@ -41,7 +41,6 @@
   payload_off: "clear"
   sensor_class: smoke
 - platform: yr
-- platform: plex
 - platform: systemmonitor
   resources:
     - type: memory_use_percent
