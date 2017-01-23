@@ -1,6 +1,7 @@
 [Unit]
 Description=Home Assistant
 After=network.target
+Wants=mosquitto.service
 
 [Service]
 User=hass
