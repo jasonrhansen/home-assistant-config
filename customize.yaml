@@ -20,3 +20,11 @@ sensor.yweather_wind_speed:
   friendly_name: Wind Speed
 group.all_automations:
   hidden: false
+sensor.front_motion_sensor_battery:
+  icon: mdi:battery
+sensor.house_garage_door_battery:
+  icon: mdi:battery
+sensor.back_door_battery:
+  icon: mdi:battery
+sensor.smoke_and_co_alarm_battery:
+  icon: mdi:battery

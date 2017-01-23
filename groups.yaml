@@ -6,6 +6,7 @@ default_view:
     - group.outside
     - group.sensors
     - group.devices
+    - group.batteries
     - group.indoor_climate
 living_room:
   name: Living Room
@@ -39,6 +40,13 @@ phones:
   entities:
     - device_tracker.jason_nexus
     - device_tracker.luisa_iphone
+batteries:
+  name: Batteries
+  entities:
+    - sensor.front_motion_sensor_battery
+    - sensor.house_garage_door_battery
+    - sensor.back_door_battery
+    - sensor.smoke_and_co_alarm_battery
 indoor_climate:
   name: Indoor Climate
   entities:

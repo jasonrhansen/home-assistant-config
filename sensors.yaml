@@ -40,6 +40,22 @@
   payload_on: "detected"
   payload_off: "clear"
   sensor_class: smoke
+- platform: mqtt
+  name: "Front Motion Sensor Battery"
+  state_topic: "smartthings/Front Motion Sensor/battery"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: "House Garage Door Battery"
+  state_topic: "smartthings/House Garage Door/battery"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: "Back Door Battery"
+  state_topic: "smartthings/Back Door/battery"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: "Smoke and CO Alarm Battery"
+  state_topic: "smartthings/Smoke and CO Alarm/battery"
+  unit_of_measurement: "%"
 - platform: yr
 - platform: systemmonitor
   resources:
