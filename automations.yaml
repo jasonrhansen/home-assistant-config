@@ -34,14 +34,9 @@
     entity_id: sensor.house_garage_door
     to: 'open'
   condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: 'device_tracker.hansen_jasonnexus6p'
-        state: 'not home'
-      - condition: state
-        entity_id: 'device_tracker.hansen_luisaiphone'
-        state: 'not home'
+    condition: state
+    entity_id: group.phones
+    state: 'not present'
   action:
     service: notify.pushbullet
     data:
@@ -67,7 +62,7 @@
   condition:
     condition: state
     entity_id: group.phones
-    state: 'not home'
+    state: 'not present'
   action:
     service: notify.pushbullet
     data:
@@ -93,7 +88,7 @@
   condition:
     condition: state
     entity_id: group.phones
-    state: 'not home'
+    state: 'not present'
   action:
     service: notify.pushbullet
     data:
